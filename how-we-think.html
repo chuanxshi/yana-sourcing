@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Think — Yana Sourcing</title>
+  <meta name="description" content="How upstream engineering risk is identified for deployed robotic and motion systems." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-title">Yana Sourcing</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="how-we-think.html" class="nav-link nav-link-active">How We Think</a>
+        <a href="talk.html" class="nav-link">Talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page page-how">
+    <section class="block">
+      <h1 class="page-heading">How we look at upstream decisions.</h1>
+      <p class="lead">
+        The aim is to match specific field behavior to the decision points that made it likely, not to re-litigate every design choice.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2 class="block-heading">What we look at</h2>
+      <ol class="judgment-list">
+        <li>
+          <span class="judgment-term">Where risk was consciously parked.</span>
+          Design reviews, trade-off notes, and “non-blocking” concerns that were accepted to keep the program moving.
+        </li>
+        <li>
+          <span class="judgment-term">Interfaces nobody fully owned.</span>
+          Mechanical joints, electrical boundaries, thermal paths, and software-hardware seams where assumptions span teams.
+        </li>
+        <li>
+          <span class="judgment-term">Field reality that diverged from models.</span>
+          How the system is actually operated, maintained, and misused versus what the early models assumed.
+        </li>
+        <li>
+          <span class="judgment-term">Paths where variability piles up.</span>
+          Tolerance chains, supplier spread, assembly steps, calibration, and control loops that quietly widen the state space.
+        </li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block-heading">What we intentionally ignore</h2>
+      <ul class="list">
+        <li>Generic “best practices” checklists that do not explain your specific failures.</li>
+        <li>Superficial claims that a single supplier, part, or firmware revision is “the” cause.</li>
+        <li>Cosmetic changes that reduce embarrassment but do not change the failure surface.</li>
+        <li>Arguments about abstract architectures that do not move a measurable risk boundary.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2 class="block-heading">When we say “do not change this”</h2>
+      <p>
+        There are parts of a system that look awkward but are now load-bearing in ways nobody expected. We call out these areas explicitly when:
+      </p>
+      <ul class="list">
+        <li>They are compensating for deeper issues that are not yet ready to be addressed.</li>
+        <li>They anchor a fragile equilibrium that would collapse if “cleaned up”.</li>
+        <li>The cost of disturbing them exceeds the value of making them more elegant.</li>
+      </ul>
+      <p>
+        In those cases, we document why they must remain fixed while other changes are explored around them.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2 class="block-heading">When we say “this will bite you later”</h2>
+      <p>
+        We flag decisions that are not yet failing in the field but are already structurally fragile. Typical patterns include:
+      </p>
+      <ul class="list">
+        <li>Loads or duty cycles that are safe only under optimistic operator behavior.</li>
+        <li>Calibration or maintenance steps that depend on rare discipline from busy teams.</li>
+        <li>Interfaces where nobody is clearly responsible for what happens in the corner cases.</li>
+        <li>Architectural choices that make future variants significantly harder than they appear.</li>
+      </ul>
+      <p>
+        These are written down plainly so leadership can decide whether to defer, accept, or address them now.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+

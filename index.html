@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yana Sourcing — Upstream Engineering Risk</title>
+  <meta name="description" content="Interface for engineering leaders who discovered failures only after hardware was in the field." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-title">Yana Sourcing</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link nav-link-active">Home</a>
+        <a href="how-we-think.html" class="nav-link">How We Think</a>
+        <a href="talk.html" class="nav-link">Talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page page-home">
+    <section class="block">
+      <h1 class="page-heading">Most of your failures started before anyone wrote code or cut metal.</h1>
+      <p class="lead">What you are seeing now is upstream decisions expressing themselves, not isolated downstream faults.</p>
+    </section>
+
+    <section class="block">
+      <h2 class="block-heading">Where the failures were baked in</h2>
+      <ol class="judgment-list">
+        <li>
+          <span class="judgment-term">Geometry and motion locked in too early.</span>
+          Linkages, clearances, and motion profiles bake in stress and unintended contact; field wear is just the delayed report.
+        </li>
+        <li>
+          <span class="judgment-term">Tolerance stacks treated as “close enough”.</span>
+          Real assemblies — fits, runout, compliance, thermal growth — were never evaluated as a complete chain.
+        </li>
+        <li>
+          <span class="judgment-term">Environment assumptions left implicit.</span>
+          Dust, fluids, vibration, duty cycle, and operator behavior were assumed benign and never owned as hard constraints.
+        </li>
+        <li>
+          <span class="judgment-term">Actuation and sensing coupled too tightly.</span>
+          Motor, gearbox, joints, and feedback share failure modes, so minor drift cascades into behavior nobody predicted in tests.
+        </li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2 class="block-heading">What you are already living with</h2>
+      <ul class="list">
+        <li>Units that passed test behave differently after weeks or months in the field.</li>
+        <li>Wear or drift appears where the design assumed “nothing important” was happening.</li>
+        <li>Nominally identical builds show unexplained spread in behavior or failure timing.</li>
+        <li>Patches and supplier changes help locally but the pattern of surprises continues.</li>
+      </ul>
+      <p class="lead">
+        If the pattern above matches your field behavior, the upstream decision pattern is clear enough to talk.
+      </p>
+      <p class="cta-inline">
+        <a href="talk.html" class="button-primary">Talk if this sounds familiar</a>
+      </p>
+    </section>
+    <section class="block">
+      
+    </section>
+  </main>
+</body>
+</html>
+

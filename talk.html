@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talk — Yana Sourcing</title>
+  <meta name="description" content="Engineering intake for teams with deployed hardware experiencing unexpected failures or drift." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-title">Yana Sourcing</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="how-we-think.html" class="nav-link">How We Think</a>
+        <a href="talk.html" class="nav-link nav-link-active">Talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page page-talk">
+    <section class="block">
+      <h1 class="page-heading">If this already happened to you.</h1>
+      <p class="lead">
+        This form is for engineering leaders who have hardware in the field and have already been surprised by how it behaves.
+      </p>
+    </section>
+
+    <section class="block">
+      <form class="intake-form" method="post">
+        <div class="form-field">
+          <label for="system-description">Describe the system</label>
+          <p class="hint">
+            Architecture, key subsystems, actuation and sensing, rough scale, and what it is responsible for.
+          </p>
+          <textarea id="system-description" name="system_description" rows="6" required></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="system-location">Where it is running</label>
+          <p class="hint">
+            Type of environment, geography, deployment pattern, and who operates or maintains it.
+          </p>
+          <textarea id="system-location" name="system_location" rows="4" required></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="system-surprises">What surprised you</label>
+          <p class="hint">
+            The first signs that something was off, what changed over time, and which failures you did not expect given how it tested.
+          </p>
+          <textarea id="system-surprises" name="system_surprises" rows="6" required></textarea>
+        </div>
+
+        <div class="form-footer">
+          <p class="hint">
+            The purpose of this intake is to understand where upstream decisions may have set you up for these outcomes.
+          </p>
+          <button type="submit" class="button-primary">Send engineering intake</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+
