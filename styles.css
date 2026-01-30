@@ -57,6 +57,11 @@ a:hover {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+  text-decoration: none;
+}
+
+.site-title:hover {
+  text-decoration: none;
 }
 
 .nav-toggle {
@@ -108,12 +113,7 @@ a:hover {
   margin-top: -1px;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-}
-
 .nav-link-primary:hover {
-  text-decoration: none;
   background-color: #243a46;
 }
 
